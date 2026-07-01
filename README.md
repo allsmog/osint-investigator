@@ -47,6 +47,17 @@ npm install
 
 The plugin manifest is at `.codex-plugin/plugin.json`, and the MCP server config is at `.mcp.json`.
 
+## Testing
+
+Run the MCP syntax check and local smoke test:
+
+```bash
+cd mcp
+npm test
+```
+
+The smoke test starts the MCP server in a temporary evidence directory and checks tool discovery, catalog routing, API-key status, public toolkit fallback behavior, entity extraction, evidence registration, claim comparison, and graph export.
+
 ## Configuration
 
 Evidence is stored under:
