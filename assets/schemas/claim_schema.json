@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OSINT Claim",
+  "type": "object",
+  "required": ["claim_id", "claim"],
+  "properties": {
+    "claim_id": { "type": "string" },
+    "claim": { "type": "string" },
+    "status": { "type": "string", "enum": ["untested", "supported", "probable", "unresolved", "contradicted", "false"] },
+    "confidence": { "type": "string", "enum": ["low", "medium", "high"] },
+    "evidence_for": { "type": "array", "items": { "type": "string" } },
+    "evidence_against": { "type": "array", "items": { "type": "string" } },
+    "last_checked": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "purpose": "Map OSINT capabilities to existing MCPs or plugin tools when they are available, so this plugin can delegate instead of reimplementing broad integrations.",
+  "built_in_or_common": [
+    {
+      "capability": "browser automation and screenshots",
+      "preferred_mcp_or_plugin": "browser",
+      "use_for": "Manual providers, login-required sites, visual checks, screenshots, and workflow verification."
+    },
+    {
+      "capability": "repository and code intelligence",
+      "preferred_mcp_or_plugin": "github",
+      "use_for": "GitHub-hosted tools, issue/PR context, source repositories, and upstream toolkit inspection."
+    },
+    {
+      "capability": "spreadsheet evidence ledgers",
+      "preferred_mcp_or_plugin": "spreadsheets",
+      "use_for": "Evidence matrices, source trackers, entity tables, and graph edge review."
+    },
+    {
+      "capability": "PDF source extraction",
+      "preferred_mcp_or_plugin": "pdf",
+      "use_for": "Sanctions PDFs, court filings, reports, and official document extraction."
+    }
+  ],
+  "external_mcp_candidates": [
+    {
+      "capability": "relational evidence warehouse",
+      "example": "postgres MCP",
+      "environment": ["POSTGRES_URL"],
+      "use_for": "Large evidence ledgers, entity tables, and repeatable SQL analysis."
+    },
+    {
+      "capability": "graph database",
+      "example": "neo4j MCP",
+      "environment": ["NEO4J_URI", "NEO4J_USERNAME", "NEO4J_PASSWORD"],
+      "use_for": "Persistent entity relationship graphs and network analysis."
+    },
+    {
+      "capability": "full browser control",
+      "example": "playwright MCP",
+      "environment": [],
+      "use_for": "Search-result capture, page rendering, login/session workflows, and screenshots."
+    },
+    {
+      "capability": "cloud object storage",
+      "example": "s3 or gcs MCP",
+      "environment": ["AWS_PROFILE", "AWS_REGION"],
+      "use_for": "Media, screenshots, archives, and large investigation artifact storage."
+    }
+  ],
+  "rule": "Prefer a purpose-built existing MCP for durable data stores, browser automation, document parsing, or cloud storage. Keep this plugin focused on OSINT workflow orchestration, evidence normalization, provider routing, and investigation reasoning."
+}

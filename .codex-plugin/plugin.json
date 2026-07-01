@@ -1,0 +1,26 @@
+{
+  "name": "osint-investigator",
+  "version": "0.1.0",
+  "description": "Target-agnostic OSINT investigation plugin with an MCP toolchain for archiving, source discovery, entity extraction, evidence tracking, graph export, and reproducible workflow skills.",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "OSINT Investigator",
+    "shortDescription": "Run reproducible OSINT evidence workflows.",
+    "longDescription": "OSINT Investigator provides a target-agnostic MCP-backed OSINT toolchain for archiving, source discovery, social/media lead tracing, sanctions and finance mapping, visual verification, geolocation workflows, evidence scoring, timelines, and graph exports.",
+    "developerName": "Local developer",
+    "category": "Research",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Start an OSINT evidence ledger.",
+      "Verify a proof-of-life claim.",
+      "Map a sanctions network."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}

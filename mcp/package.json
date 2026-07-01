@@ -1,0 +1,25 @@
+{
+  "name": "osint-investigator-mcp",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "MCP server for target-agnostic OSINT investigation workflows.",
+  "keywords": [
+    "osint",
+    "open-source-intelligence",
+    "mcp",
+    "model-context-protocol",
+    "investigation",
+    "evidence-ledger",
+    "source-verification",
+    "archiving",
+    "geolocation",
+    "network-analysis"
+  ],
+  "bin": {
+    "osint-investigator-mcp": "./src/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.5"
+  }
+}

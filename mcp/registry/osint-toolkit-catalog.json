@@ -1,0 +1,472 @@
+{
+  "version": "0.1.0",
+  "description": "Target-agnostic provider catalog organized by open-source investigation capability categories. Providers are marked as direct, api, local, browser_manual, external_manual, existing_mcp, or monitor_only.",
+  "categories": [
+    {
+      "id": "archiving",
+      "name": "Archiving",
+      "providers": [
+        {
+          "id": "wayback_cdx",
+          "name": "Wayback CDX",
+          "mode": "direct",
+          "tools": ["osint_wayback_lookup"],
+          "auth": "none",
+          "url": "https://web.archive.org/cdx"
+        },
+        {
+          "id": "wayback_save",
+          "name": "Wayback Save Page Now",
+          "mode": "direct",
+          "tools": ["osint_archive_url"],
+          "auth": "none",
+          "url": "https://web.archive.org/save/"
+        },
+        {
+          "id": "archive_today",
+          "name": "archive.today",
+          "mode": "external_manual",
+          "auth": "browser",
+          "url": "https://archive.today/"
+        },
+        {
+          "id": "hunchly",
+          "name": "Hunchly",
+          "mode": "browser_manual",
+          "auth": "licensed_desktop_app",
+          "url": "https://www.hunch.ly/"
+        },
+        {
+          "id": "auto_archiver",
+          "name": "Auto Archiver",
+          "mode": "local",
+          "auth": "configured_accounts_optional"
+        }
+      ]
+    },
+    {
+      "id": "social_media",
+      "name": "Social Media",
+      "providers": [
+        {
+          "id": "tgstat",
+          "name": "TGStat",
+          "mode": "api",
+          "env": ["TGSTAT_TOKEN"],
+          "auth": "api_key",
+          "notes": "Use for Telegram channel/post discovery where API access is configured."
+        },
+        {
+          "id": "telepathy",
+          "name": "Telepathy",
+          "mode": "external_manual",
+          "auth": "browser",
+          "notes": "Use for Telegram search and channel exploration."
+        },
+        {
+          "id": "telegramdb",
+          "name": "TelegramDB",
+          "mode": "external_manual",
+          "auth": "browser",
+          "notes": "Use as a Telegram lead source; verify externally."
+        },
+        {
+          "id": "telegago",
+          "name": "Telegago",
+          "mode": "external_manual",
+          "auth": "browser",
+          "notes": "Google-based Telegram public-content search."
+        },
+        {
+          "id": "open_measures",
+          "name": "Open Measures",
+          "mode": "api",
+          "env": ["OPENMEASURES_API_KEY"],
+          "auth": "api_key"
+        },
+        {
+          "id": "youtube_data_api",
+          "name": "YouTube Data API",
+          "mode": "api",
+          "env": ["YOUTUBE_API_KEY"],
+          "auth": "api_key"
+        },
+        {
+          "id": "x_advanced_search",
+          "name": "X Advanced Search",
+          "mode": "browser_manual",
+          "auth": "platform_account_optional"
+        }
+      ]
+    },
+    {
+      "id": "image_video",
+      "name": "Image and Video",
+      "providers": [
+        {
+          "id": "invid",
+          "name": "InVID / WeVerify",
+          "mode": "browser_manual",
+          "auth": "browser_extension",
+          "notes": "Use for keyframe extraction and reverse-search workflows."
+        },
+        {
+          "id": "google_lens",
+          "name": "Google Lens",
+          "mode": "browser_manual",
+          "auth": "browser"
+        },
+        {
+          "id": "yandex_reverse_image",
+          "name": "Yandex Reverse Image",
+          "mode": "browser_manual",
+          "auth": "browser"
+        },
+        {
+          "id": "exiftool",
+          "name": "ExifTool",
+          "mode": "local",
+          "auth": "none"
+        },
+        {
+          "id": "forensically",
+          "name": "Forensically",
+          "mode": "browser_manual",
+          "auth": "browser"
+        },
+        {
+          "id": "fotoforensics",
+          "name": "FotoForensics",
+          "mode": "external_manual",
+          "auth": "browser"
+        },
+        {
+          "id": "metadata2go",
+          "name": "Metadata2Go",
+          "mode": "external_manual",
+          "auth": "browser"
+        }
+      ]
+    },
+    {
+      "id": "geolocation",
+      "name": "Geolocation",
+      "providers": [
+        {
+          "id": "osm_search",
+          "name": "OpenStreetMap Search",
+          "mode": "browser_manual",
+          "auth": "browser"
+        },
+        {
+          "id": "overpass_turbo",
+          "name": "Overpass Turbo",
+          "mode": "api",
+          "auth": "none",
+          "url": "https://overpass-turbo.eu/"
+        },
+        {
+          "id": "search_grid_generator",
+          "name": "Search Grid Generator",
+          "mode": "browser_manual",
+          "auth": "browser"
+        },
+        {
+          "id": "suncalc",
+          "name": "SunCalc",
+          "mode": "browser_manual",
+          "auth": "browser"
+        },
+        {
+          "id": "mapillary",
+          "name": "Mapillary",
+          "mode": "api",
+          "env": ["MAPILLARY_ACCESS_TOKEN"],
+          "auth": "api_key"
+        }
+      ]
+    },
+    {
+      "id": "maps_satellites",
+      "name": "Maps and Satellites",
+      "providers": [
+        {
+          "id": "google_earth_pro",
+          "name": "Google Earth Pro",
+          "mode": "external_manual",
+          "auth": "desktop_app"
+        },
+        {
+          "id": "sentinel_hub",
+          "name": "Sentinel Hub",
+          "mode": "api",
+          "env": ["SENTINELHUB_CLIENT_ID", "SENTINELHUB_CLIENT_SECRET"],
+          "auth": "oauth_client"
+        },
+        {
+          "id": "eo_browser",
+          "name": "EO Browser",
+          "mode": "browser_manual",
+          "auth": "account_optional"
+        },
+        {
+          "id": "wikimapia",
+          "name": "Wikimapia",
+          "mode": "browser_manual",
+          "auth": "browser"
+        }
+      ]
+    },
+    {
+      "id": "websites",
+      "name": "Websites and Infrastructure",
+      "providers": [
+        {
+          "id": "urlscan",
+          "name": "URLScan",
+          "mode": "api",
+          "tools": ["osint_urlscan_search"],
+          "env": ["URLSCAN_API_KEY"],
+          "auth": "api_key_optional"
+        },
+        {
+          "id": "publicwww",
+          "name": "PublicWWW",
+          "mode": "api",
+          "env": ["PUBLICWWW_API_KEY"],
+          "auth": "api_key"
+        },
+        {
+          "id": "dns_lookup",
+          "name": "DNS Lookup",
+          "mode": "direct",
+          "tools": ["osint_dns_lookup"],
+          "auth": "none"
+        },
+        {
+          "id": "http_probe",
+          "name": "HTTP Probe",
+          "mode": "direct",
+          "tools": ["osint_http_probe"],
+          "auth": "none"
+        },
+        {
+          "id": "crtsh",
+          "name": "crt.sh",
+          "mode": "direct",
+          "auth": "none"
+        },
+        {
+          "id": "shodan",
+          "name": "Shodan",
+          "mode": "api",
+          "env": ["SHODAN_API_KEY"],
+          "auth": "api_key"
+        },
+        {
+          "id": "censys",
+          "name": "Censys",
+          "mode": "api",
+          "env": ["CENSYS_API_ID", "CENSYS_API_SECRET"],
+          "auth": "api_key"
+        }
+      ]
+    },
+    {
+      "id": "companies_finance",
+      "name": "Companies and Finance",
+      "providers": [
+        {
+          "id": "opensanctions",
+          "name": "OpenSanctions",
+          "mode": "api",
+          "tools": ["osint_opensanctions_search"],
+          "env": ["OPENSANCTIONS_API_KEY"],
+          "auth": "api_key_optional"
+        },
+        {
+          "id": "occrp_aleph",
+          "name": "OCCRP Aleph",
+          "mode": "api",
+          "env": ["ALEPH_API_KEY"],
+          "auth": "api_key_optional"
+        },
+        {
+          "id": "opencorporates",
+          "name": "OpenCorporates",
+          "mode": "api",
+          "env": ["OPENCORPORATES_API_TOKEN"],
+          "auth": "api_key_optional"
+        },
+        {
+          "id": "icij_offshore_leaks",
+          "name": "ICIJ Offshore Leaks",
+          "mode": "browser_manual",
+          "auth": "browser"
+        },
+        {
+          "id": "sec_edgar",
+          "name": "SEC EDGAR",
+          "mode": "api",
+          "auth": "none"
+        },
+        {
+          "id": "gleif",
+          "name": "GLEIF",
+          "mode": "api",
+          "auth": "none"
+        },
+        {
+          "id": "blockchain_explorers",
+          "name": "Blockchain Explorers",
+          "mode": "external_manual",
+          "auth": "browser_or_api_key"
+        }
+      ]
+    },
+    {
+      "id": "people",
+      "name": "People",
+      "providers": [
+        {
+          "id": "wikidata",
+          "name": "Wikidata",
+          "mode": "api",
+          "auth": "none"
+        },
+        {
+          "id": "linkedin",
+          "name": "LinkedIn",
+          "mode": "browser_manual",
+          "auth": "platform_account"
+        },
+        {
+          "id": "search_engines",
+          "name": "Search Engines",
+          "mode": "external_manual",
+          "auth": "browser"
+        }
+      ]
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "providers": [
+        {
+          "id": "opensky",
+          "name": "OpenSky Network",
+          "mode": "api",
+          "env": ["OPENSKY_USERNAME", "OPENSKY_PASSWORD"],
+          "auth": "account_optional"
+        },
+        {
+          "id": "adsb_exchange",
+          "name": "ADS-B Exchange",
+          "mode": "api",
+          "env": ["ADSB_EXCHANGE_API_KEY"],
+          "auth": "api_key"
+        },
+        {
+          "id": "flightradar24",
+          "name": "Flightradar24",
+          "mode": "browser_manual",
+          "auth": "account_optional"
+        },
+        {
+          "id": "marinetraffic",
+          "name": "MarineTraffic",
+          "mode": "api",
+          "env": ["MARINETRAFFIC_API_KEY"],
+          "auth": "api_key"
+        },
+        {
+          "id": "vesselfinder",
+          "name": "VesselFinder",
+          "mode": "browser_manual",
+          "auth": "account_optional"
+        }
+      ]
+    },
+    {
+      "id": "conflict",
+      "name": "Conflict",
+      "providers": [
+        {
+          "id": "acled",
+          "name": "ACLED",
+          "mode": "api",
+          "env": ["ACLED_EMAIL", "ACLED_API_KEY"],
+          "auth": "api_key"
+        },
+        {
+          "id": "liveuamap",
+          "name": "Liveuamap",
+          "mode": "browser_manual",
+          "auth": "browser"
+        },
+        {
+          "id": "gdelt",
+          "name": "GDELT",
+          "mode": "api",
+          "auth": "none"
+        }
+      ]
+    },
+    {
+      "id": "environment_wildlife",
+      "name": "Environment and Wildlife",
+      "providers": [
+        {
+          "id": "gbif",
+          "name": "GBIF",
+          "mode": "api",
+          "auth": "none"
+        },
+        {
+          "id": "global_forest_watch",
+          "name": "Global Forest Watch",
+          "mode": "api",
+          "env": ["GFW_API_KEY"],
+          "auth": "api_key_optional"
+        },
+        {
+          "id": "nasa_firms",
+          "name": "NASA FIRMS",
+          "mode": "api",
+          "env": ["NASA_FIRMS_MAP_KEY"],
+          "auth": "api_key_optional"
+        }
+      ]
+    },
+    {
+      "id": "data_analysis",
+      "name": "Data Organization and Analysis",
+      "providers": [
+        {
+          "id": "sqlite",
+          "name": "SQLite Evidence Store",
+          "mode": "local",
+          "auth": "none"
+        },
+        {
+          "id": "gephi",
+          "name": "Gephi",
+          "mode": "external_manual",
+          "auth": "desktop_app"
+        },
+        {
+          "id": "openrefine",
+          "name": "OpenRefine",
+          "mode": "external_manual",
+          "auth": "desktop_or_local_server"
+        },
+        {
+          "id": "maltego",
+          "name": "Maltego",
+          "mode": "external_manual",
+          "auth": "licensed_desktop_app"
+        }
+      ]
+    }
+  ]
+}

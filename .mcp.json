@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "osint-investigator": {
+      "command": "node",
+      "args": [
+        "./mcp/src/index.js"
+      ],
+      "env": {
+        "OSINT_INVESTIGATOR_HOME": "${HOME}/.osint-investigator"
+      }
+    }
+  }
+}

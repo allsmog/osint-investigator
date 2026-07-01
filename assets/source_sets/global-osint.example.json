@@ -1,0 +1,10 @@
+{
+  "name": "global-osint-example",
+  "description": "Example source set. Replace with investigation-specific sources.",
+  "sources": [
+    { "name": "Wayback Machine", "category": "archiving", "url": "https://web.archive.org/" },
+    { "name": "OpenSanctions", "category": "companies_finance", "url": "https://www.opensanctions.org/" },
+    { "name": "URLScan", "category": "websites", "url": "https://urlscan.io/" },
+    { "name": "Community OSINT Toolkit", "category": "tool_catalog", "url": "https://example.com/osint-toolkit" }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OSINT Entity",
+  "type": "object",
+  "required": ["entity_id", "label", "type"],
+  "properties": {
+    "entity_id": { "type": "string" },
+    "label": { "type": "string" },
+    "type": { "type": "string" },
+    "aliases": { "type": "array", "items": { "type": "string" } },
+    "current_role": { "type": "string" },
+    "institution": { "type": "string" },
+    "identifiers": { "type": "object" },
+    "evidence": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": "string" }
+  }
+}
